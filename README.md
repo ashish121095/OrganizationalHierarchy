@@ -4,15 +4,11 @@ To implement a general tree data structure that can store, manipulate, and query
 
 Requirements
 -----------------------------------------------------------------------------------------------------------------------------------------------
-•	C++
-•	General Tree Data Structure
-•	Linked-list based Implementation or an Array-based implementation
-•	Read from file
+C++ Programming Language, General Tree Data Structure, Linked-list based Implementation or an Array-based implementation, Read from file
 
 Assumptions
 -----------------------------------------------------------------------------------------------------------------------------------------------
-•	All titles are unique in the company
-•	One employee works under only one boss
+•	All titles are unique in the company,	One employee works under only one boss
 
 About Project
 -----------------------------------------------------------------------------------------------------------------------------------------------
