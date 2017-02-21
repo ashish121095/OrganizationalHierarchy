@@ -8,7 +8,7 @@ C++ Programming Language, General Tree Data Structure, Linked-list based Impleme
 
 Assumptions
 -----------------------------------------------------------------------------------------------------------------------------------------------
-•	All titles are unique in the company,	One employee works under only one boss
+All titles are unique in the company,	One employee works under only one boss
 
 About Project
 -----------------------------------------------------------------------------------------------------------------------------------------------
