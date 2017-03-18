@@ -100,7 +100,7 @@ public:
 			return node->rightSiblings;
 		}
 		else
-			TREENULLPTR;
+			return TREENULLPTR;
 	}
 
 	/*
@@ -112,7 +112,7 @@ public:
 			int tabSpaces = 0;
 
 			//prints title and name of the person
-			cout << subTreeRoot->title << ", " << subTreeRoot->name << endl;
+			//cout << subTreeRoot->title << ", " << subTreeRoot->name << endl;
 
 			//call printSubHelper method
 			printSubTreeHelper(subTreeRoot, tabSpaces);
@@ -215,7 +215,7 @@ public:
 			return false;
 		else
 			//calls fireHelper method to fire an employee
-			fireHelper(formerTitle, root);
+			return fireHelper(formerTitle, root);
 
 	}
 
@@ -228,7 +228,7 @@ public:
 		TREENODEPTR currentNode;
 
 		//loop to find employer to all the way left unill null found
-		while (tempNode->leftChild != TREENULLPTR){
+		while (tempNode != TREENULLPTR && tempNode->leftChild != TREENULLPTR){
 			TREENODEPTR nextNode = tempNode->leftChild;
 
 			//if employee found than delete get in
@@ -266,7 +266,7 @@ public:
 			fireHelper(Title, nextNode);
 			nextNode = nextNode->rightSiblings;
 		}
-		while (tempNode->rightSiblings != TREENULLPTR){
+		while (tempNode != TREENULLPTR && tempNode->rightSiblings != TREENULLPTR){
 			tempNode = tempNode->rightSiblings;
 			if (tempNode->title == Title){
 				if (tempNode->leftChild == TREENULLPTR)
@@ -277,15 +277,20 @@ public:
 						count--;
 						return true;
 					}
-					else
+					else {
 						delete(tempNode);
+						count--;
+						return true;
+					}
 				}
 
 			}
 			fireHelper(Title, tempNode->rightSiblings);
 		}
-
+		return false;
 	}
 };
+
+
 
 
