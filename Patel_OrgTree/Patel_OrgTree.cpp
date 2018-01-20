@@ -47,7 +47,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Check whether root and new children were added successfully
 	cout << "AFTER ADDING NEW ROOT AND SEVERAL EMPLOYEES:" << endl;
 	theTree->printSubTree(theTree->getRoot());
-	cout << "First" << endl;
 	cout << "Number of employees: " << theTree->getSize() << endl;
 
 	// Test fire
@@ -59,36 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	cout << "New Number of employees: " << theTree->getSize() << endl;
 
-	// Test write
-	//theTree->write("testOut.txt");
 
 
-	// Test read on input file
-	//OrgTree* readTree = new OrgTree();
-	/*if (readTree->read("input.txt")) {
-		cout << "TREE READ FROM INPUT.TXT" << endl;
-		readTree->printSubTree(readTree->getRoot());
-	}*/
-	//else
-		cout << "COULD NOT READ FROM INPUT.TXT" << endl;
-
-/*
-	// Test read on file written by OrgTree::write
-	OrgTree* readTree2 = new OrgTree();
-	if (readTree2->read("testOut.txt")) {
-		cout << "TREE READ AFTER BEING WRITTEN TO TESTOUT.TXT:" << endl;
-		readTree2->printSubTree(readTree2->getRoot());
-	}
-	else cout << "COULD NOT READ FROM TESTOUT.TXT" << endl;
-	system("pause");
-
-
-	// Test whether size is limited
-	TREENODEPTR theRoot = theTree->getRoot();
-	for (int i = 0; i < 10000; i++) {
-		cout << i << " ";
-		theTree->hire(theRoot, "Expendable Wench", "Bob Smith");
-	}
-	*/
 	return 0;
 }
